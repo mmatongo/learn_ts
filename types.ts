@@ -1,11 +1,17 @@
 interface Person {
-  name: String
-  age: Number
+  name: string;
+  age: number;
 }
 
-const user: Person = {
-  name: 'Daniel',
-  age: 23,
+class NewPerson {
+  name: string;
+  age: number;
+
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
 }
 
-// types cannot not be assigned a different type once assigned.
+const newPerson: Person = new NewPerson('Daniel', 23);
+console.log(newPerson);
